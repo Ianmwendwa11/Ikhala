@@ -1,22 +1,144 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
-   <meta charset="utf-8">
-      <title>Music Event Website </title>
-         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-            <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-               <link rel="stylesheet" type="text/css" href="css/splitting.css">
-                  <link rel="stylesheet" type="text/css" href="css/aos.css">
-                     <link rel="stylesheet" type="text/css" href="css/style.css">
-                     </head>
-                     <body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikhala - African Sound & Youth Culture</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p>Ikhala</p>
+        </div>
+    </div>
 
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-center">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Ikhala Logo" class="logo-img">
+                </a>
+            </div>
+            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="buy-tickets.html">Buy Tickets</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
 
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
 
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-menu-link active">Home</a>
+            <a href="about.html" class="mobile-menu-link">About Us</a>
+            <a href="buy-tickets.html" class="mobile-menu-link">Buy Tickets</a>
+            <a href="contact.html" class="mobile-menu-link">Contact Us</a>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome To The Home Of Music</h1>
+            <p class="hero-subtitle">Nairobi's sound, One night.</p>
+            <a href="buy-tickets.html" class="btn btn-primary">
+                Buy Tickets
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
 
-                     <script src="js/aos.js"></script>
-                     <script src="js/splitting.min.js"></script>
-                     <script src="js/script.js"></script>
-                     </body>
-                     </html>
+    <!-- About Section (Home Page) -->
+    <section class="about-home">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-box about-box-left">
+                    <h3>We are an event company who's vision is mainly scoped around,</h3>
+                    <p>"Building a platform for African sound and youth culture"</p>
+                </div>
+
+                <div class="about-box about-box-center">
+                    <div class="logo-large">
+                        <img src="assets/logo-circular.png" alt="Ikhala Circular Logo">
+                    </div>
+                </div>
+
+                <div class="about-box about-box-right">
+                    <h3>Ikhala stands for:</h3>
+                    <ul class="values-list">
+                        <li>Community</li>
+                        <li>Energy</li>
+                        <li>Connection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h2 class="pricing-tier">Early Bird</h2>
+                    <div class="pricing-line"></div>
+                    <a href="buy-tickets.html" class="btn btn-secondary">
+                        Buy Now!
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="pricing-card pricing-card-center">
+                    <h2 class="pricing-tier">Regular</h2>
+                    <div class="pricing-logo">
+                        <img src="assets/logo.png" alt="Ikhala">
+                    </div>
+                    <a href="buy-tickets.html" class="btn btn-secondary">
+                        Buy Now!
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="pricing-card">
+                    <h2 class="pricing-tier">VIP</h2>
+                    <div class="pricing-line"></div>
+                    <a href="buy-tickets.html" class="btn btn-secondary">
+                        Buy Now!
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ikhala. All rights reserved.</p>
+            <p>Building a platform for African sound and youth culture.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
