@@ -1,17 +1,22 @@
-// script.js
+/* --------- menu -----------  */ 
 
-// This function gets the current date and time in a formatted way.
-function getCurrentDateTime() {
-    const now = new Date();
-    const year = now.getUTCFullYear();
-    const month = String(now.getUTCMonth() + 1).padStart(2, '0'); // Months are zero-based
-    const day = String(now.getUTCDate()).padStart(2, '0');
-    const hours = String(now.getUTCHours()).padStart(2, '0');
-    const minutes = String(now.getUTCMinutes()).padStart(2, '0');
-    const seconds = String(now.getUTCSeconds()).padStart(2, '0');
+const menu = document.querySelector(".menu");
+const openMenuBtn = document.querySelector(".open-menu-btn");
+const closeMenuBtn = document.querySelector(".close-menu-btn");
 
-    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-}
+[openMenuBtn, closeMenuBtn].forEach((btn) => {
+   btn.addEventListener("click", () => {
+    menu.classList.toggle("open");
+    menu.style.transition = "transform 0.5s ease";
+   });
+});
 
-// Example usage:
-console.log(getCurrentDateTime());
+menu.addEventListener("transitionend", function() {
+  this.removeAttribute("style");
+}); 
+
+menu.querySelectorAll(".dropdown > i").forEach((arrow) =>{
+   arrow.addEventListener("click", function(){
+      this.closest(".dropdown").classList.toggle("active");
+   });
+});
