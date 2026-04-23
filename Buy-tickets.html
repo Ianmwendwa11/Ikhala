@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets - Ikhala</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p>Ikhala</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-center">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Ikhala Logo" class="logo-img">
+                </a>
+            </div>
+            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="buy-tickets.html" class="active">Buy Tickets</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-menu-link">Home</a>
+            <a href="about.html" class="mobile-menu-link">About Us</a>
+            <a href="buy-tickets.html" class="mobile-menu-link active">Buy Tickets</a>
+            <a href="contact.html" class="mobile-menu-link">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-tickets">
+        <div class="hero-content">
+            <h1 class="hero-title">Get Your Tickets</h1>
+            <p class="hero-subtitle">Secure your spot at the hottest event in Nairobi</p>
+        </div>
+    </section>
+
+    <!-- Tickets Section -->
+    <section class="tickets">
+        <div class="container">
+            <div class="tickets-grid">
+                <div class="ticket-card">
+                    <h2 class="ticket-tier">Early Bird</h2>
+                    <div class="ticket-price">KES 2,500</div>
+                    <div class="ticket-line"></div>
+                    <ul class="ticket-features">
+                        <li><i class="fas fa-check"></i> General Admission</li>
+                        <li><i class="fas fa-check"></i> Event Access</li>
+                        <li><i class="fas fa-check"></i> Limited Availability</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" onclick="purchaseTicket('Early Bird'); return false;">
+                        Buy Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="ticket-card ticket-card-featured">
+                    <span class="badge">Most Popular</span>
+                    <h2 class="ticket-tier">Regular</h2>
+                    <div class="ticket-price">KES 5,000</div>
+                    <div class="ticket-logo">
+                        <img src="assets/logo.png" alt="Ikhala">
+                    </div>
+                    <ul class="ticket-features">
+                        <li><i class="fas fa-check"></i> General Admission</li>
+                        <li><i class="fas fa-check"></i> Premium Seating</li>
+                        <li><i class="fas fa-check"></i> Merchandise</li>
+                        <li><i class="fas fa-check"></i> Event Access</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" onclick="purchaseTicket('Regular'); return false;">
+                        Buy Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="ticket-card">
+                    <h2 class="ticket-tier">VIP</h2>
+                    <div class="ticket-price">KES 10,000</div>
+                    <div class="ticket-line"></div>
+                    <ul class="ticket-features">
+                        <li><i class="fas fa-check"></i> VIP Seating</li>
+                        <li><i class="fas fa-check"></i> Meet & Greet</li>
+                        <li><i class="fas fa-check"></i> Exclusive Merchandise</li>
+                        <li><i class="fas fa-check"></i> Premium Parking</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" onclick="purchaseTicket('VIP'); return false;">
+                        Buy Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details -->
+    <section class="event-details">
+        <div class="container">
+            <h2>Event Details</h2>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <h3><i class="fas fa-calendar"></i> Date</h3>
+                    <p>Coming Soon</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-clock"></i> Time</h3>
+                    <p>19:00 - 04:00 EAT</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                    <p>Nairobi, Kenya</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-info-circle"></i> Age Restriction</h3>
+                    <p>18+ Only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ikhala. All rights reserved.</p>
+            <p>Building a platform for African sound and youth culture.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function purchaseTicket(tierName) {
+            alert('Redirecting to payment for ' + tierName + ' ticket...');
+            // This will be replaced with actual payment gateway integration
+        }
+    </script>
+</body>
+</html>
