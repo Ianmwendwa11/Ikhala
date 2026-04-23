@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ikhala</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p>Ikhala</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-center">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Ikhala Logo" class="logo-img">
+                </a>
+            </div>
+            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="buy-tickets.html">Buy Tickets</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-menu-link">Home</a>
+            <a href="about.html" class="mobile-menu-link">About Us</a>
+            <a href="buy-tickets.html" class="mobile-menu-link">Buy Tickets</a>
+            <a href="contact.html" class="mobile-menu-link active">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                
+                <div class="contact-item">
+                    <div class="contact-icon instagram-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Instagram</h3>
+                        <p><a href="https://instagram.com/ikhala.co" target="_blank">@ikhala.co</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon email-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p><a href="mailto:ikhala.co@gmail.com">ikhala.co@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon phone-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Phone</h3>
+                        <p>
+                            <a href="tel:+254725269443">+254 725 269 443</a><br>
+                            <a href="tel:+254757798715">+254 757 798 715</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Tagline -->
+            <div class="contact-tagline">
+                <h2>GQOM Supremacy!!</h2>
+                <p>Join the movement of African sound and youth culture</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <h2 class="section-title">Send us a Message</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ikhala. All rights reserved.</p>
+            <p>Building a platform for African sound and youth culture.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Handle contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for reaching out! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
